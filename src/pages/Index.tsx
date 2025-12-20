@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import ProjectCard from "@/components/ProjectCard";
 import HangingIDCard from "@/components/HangingIDCard";
 
@@ -120,14 +120,14 @@ const Index = () => {
   const spread = useTransform(projectsScrollProgress, [0, 0.5], [0, 1]);
   
   // Lock the spread once it's complete
-  useState(() => {
+  useEffect(() => {
     const unsubscribe = spread.on("change", (latest) => {
       if (latest >= 0.95 && !hasSpread) {
         setHasSpread(true);
       }
     });
     return unsubscribe;
-  });
+  }, [spread, hasSpread]);
 
   return (
     <div className="bg-background">
