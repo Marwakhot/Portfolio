@@ -60,6 +60,11 @@ const ProjectCard = ({ title, description, techStack, color, index, github }: Pr
             }
           }}
         >
+          <Github className="w-4 h-4 text-white/70" />
+          <span className="text-xs font-space text-white/70">
+            GitHub
+          </span>
+        </a>
       </div>
       
       {/* Tech dots decoration */}
