@@ -227,7 +227,7 @@ const Index = () => {
       </section>
 
       {/* Journey Section */}
-      <section className="min-h-screen py-24 -mt-110">
+      <section className="min-h-screen py-24 -mt-[440px]">
         <div className="container mx-auto px-6">
           {/* Currently I'm */}
           <motion.div
