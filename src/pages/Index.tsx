@@ -151,7 +151,7 @@ const Index = () => {
           </div>
 
           {/* Hanging ID Card - moved more to center */}
-          <div className="hidden md:block pt-32 -ml-96">
+          <div className="hidden md:block pt-32 -ml-96 -translate-x-[3cm]">
             <HangingIDCard />
           </div>
         </div>
