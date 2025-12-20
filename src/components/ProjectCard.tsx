@@ -13,8 +13,8 @@ interface ProjectCardProps {
 const ProjectCard = ({ title, description, techStack, color, index, github }: ProjectCardProps) => {
   return (
     <motion.div
-      className={`${color} rounded-3xl p-5 h-[240px] flex flex-col justify-between shadow-card hover:shadow-hover transition-all duration-300 cursor-pointer border-2 border-foreground/10 backdrop-blur-none relative overflow-hidden group`}
-      whileHover={{ scale: 1.05, rotate: 1 }}
+      className={`${color} rounded-3xl p-5 h-[240px] flex flex-col justify-between shadow-card transition-all duration-300 cursor-pointer border-2 border-foreground/10 backdrop-blur-none relative overflow-hidden group`}
+      whileHover={{ scale: 1.05, rotate: 1, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
       whileTap={{ scale: 0.98 }}
     >
       {/* Decorative elements */}
@@ -48,21 +48,21 @@ const ProjectCard = ({ title, description, techStack, color, index, github }: Pr
         )}
         
         <a 
-  href={github || "#"} 
-  target="_blank" 
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors w-fit mt-1"
-  onClick={(e) => e.stopPropagation()}
->
-  <Github className="w-4 h-4 text-white/70" />
-  <span className="text-xs font-space text-white/70">
-    GitHub
-  </span>
-</a>
+          href={github || "#"} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors w-fit mt-1 relative z-20"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <Github className="w-4 h-4 text-white/70" />
+          <span className="text-xs font-space text-white/70">
+            GitHub
+          </span>
+        </a>
       </div>
       
       {/* Tech dots decoration */}
-      <div className="absolute bottom-4 right-4 flex gap-1">
+      <div className="absolute bottom-4 right-4 flex gap-1 pointer-events-none">
         <div className="w-2 h-2 rounded-full bg-funky-pink/60" />
         <div className="w-2 h-2 rounded-full bg-funky-teal/60" />
         <div className="w-2 h-2 rounded-full bg-funky-yellow/80" />
