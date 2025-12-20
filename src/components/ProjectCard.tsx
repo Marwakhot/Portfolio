@@ -25,7 +25,7 @@ const ProjectCard = ({ title, description, techStack, color, index, github }: Pr
       <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-white/20 to-transparent pointer-events-none" />
       
       <div className="relative z-10">
-        <h3 className="text-xl font-bold font-outfit text-white group-hover:text-funky-purple transition-colors leading-tight">
+        <h3 className="text-xl font-bold font-outfit text-white group-hover:text-black transition-colors leading-tight">
           {title}
         </h3>
       </div>
@@ -48,17 +48,17 @@ const ProjectCard = ({ title, description, techStack, color, index, github }: Pr
         )}
         
         <a 
-          href={github || "#"} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors w-fit mt-1"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <Github className="w-4 h-4 text-foreground/70" />
-          <span className="text-xs font-space text-foreground/70 group-hover:text-foreground transition-colors">
-            GitHub
-          </span>
-        </a>
+  href={github || "#"} 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors w-fit mt-1"
+  onClick={(e) => e.stopPropagation()}
+>
+  <Github className="w-4 h-4 text-white/70" />
+  <span className="text-xs font-space text-white/70">
+    GitHub
+  </span>
+</a>
       </div>
       
       {/* Tech dots decoration */}

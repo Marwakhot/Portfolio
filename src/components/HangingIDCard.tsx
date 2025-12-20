@@ -74,8 +74,8 @@ const HangingIDCard = () => {
             
             {/* Contact Info */}
             <div className="mt-2 space-y-0.5">
-              <p className="font-space text-base text-foreground/60">marwakhot007@gmail.com</p>
-              <p className="font-space text-base text-foreground/60">+971 58 588 5323</p>
+              <p className="font-space text-sm text-foreground/60">marwakhot007@gmail.com</p>
+              <p className="font-space text-sm text-foreground/60">+971 58 588 5323</p>
             </div>
             {/* Social Links */}
             <div className="flex justify-center gap-3 mt-2">
