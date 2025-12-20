@@ -13,7 +13,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ title, description, techStack, color, index, github }: ProjectCardProps) => {
   return (
     <motion.div
-      className={`${color} rounded-3xl p-5 h-[240px] flex flex-col justify-between shadow-card transition-all duration-300 border-2 border-foreground/10 backdrop-blur-none relative overflow-hidden group`}
+      className={`${color} rounded-3xl p-5 h-[240px] flex flex-col justify-between shadow-card transition-all duration-300 border-2 border-foreground/10 backdrop-blur-none relative overflow-hidden group pointer-events-auto`}
       whileHover={{ scale: 1.05, rotate: 1, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
     >
       {/* Decorative elements */}

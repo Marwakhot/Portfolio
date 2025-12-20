@@ -176,7 +176,7 @@ const Index = () => {
             </motion.div>
 
             {/* Right side - Stacked Cards that spread to 2-column grid */}
-            <div className="w-2/3 relative h-[1100px]">
+            <div className="w-2/3 relative h-[1100px] pointer-events-none">
               {projects.map((project, index) => {
                 const row = Math.floor(index / 2);
                 const col = index % 2;
