@@ -186,29 +186,33 @@ const Index = () => {
                   <motion.div
                     key={project.title}
                     className="absolute w-[300px] md:w-[360px]"
-                    style={{
-                      top: useTransform(
-                        spread,
-                        [0, 1],
-                        [index * 12, 300 + row * 290]
-                      ),
-                      left: useTransform(
-                        spread,
-                        [0, 1],
-                        [`calc(50% - 150px + ${index * 8}px)`, col === 0 ? '5%' : '55%']
-                      ),
-                      rotate: useTransform(
-                        spread,
-                        [0, 1],
-                        [(index - 2.5) * 5, 0]
-                      ),
-                      zIndex: totalCards - index,
-                      scale: useTransform(
-                        spread,
-                        [0, 1],
-                        [1 - index * 0.03, 1]
-                      ),
-                    }}
+                   style={{
+  top: useTransform(
+    spread,
+    [0, 1],
+    [index * 12, 300 + row * 290]
+  ),
+  left: useTransform(
+    spread,
+    [0, 1],
+    [`calc(50% - 150px + ${index * 8}px)`, col === 0 ? '5%' : '55%']
+  ),
+  rotate: useTransform(
+    spread,
+    [0, 1],
+    [(index - 2.5) * 5, 0]
+  ),
+  zIndex: useTransform(
+    spread,
+    [0, 1],
+    [totalCards - index, 10 + index]
+  ),
+  scale: useTransform(
+    spread,
+    [0, 1],
+    [1 - index * 0.03, 1]
+  ),
+}}
                   >
                     <ProjectCard
                       title={project.title}
