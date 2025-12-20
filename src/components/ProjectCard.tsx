@@ -13,9 +13,8 @@ interface ProjectCardProps {
 const ProjectCard = ({ title, description, techStack, color, index, github }: ProjectCardProps) => {
   return (
     <motion.div
-      className={`${color} rounded-3xl p-5 h-[240px] flex flex-col justify-between shadow-card transition-all duration-300 cursor-pointer border-2 border-foreground/10 backdrop-blur-none relative overflow-hidden group`}
+      className={`${color} rounded-3xl p-5 h-[240px] flex flex-col justify-between shadow-card transition-all duration-300 border-2 border-foreground/10 backdrop-blur-none relative overflow-hidden group`}
       whileHover={{ scale: 1.05, rotate: 1, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
-      whileTap={{ scale: 0.98 }}
     >
       {/* Decorative elements */}
       <div className="absolute -top-6 -right-6 w-24 h-24 bg-foreground/5 rounded-full" />
@@ -51,12 +50,13 @@ const ProjectCard = ({ title, description, techStack, color, index, github }: Pr
           href={github || "#"} 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors w-fit mt-1 relative z-[100] pointer-events-auto"
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors w-fit mt-1 relative z-[100] cursor-pointer"
           onClick={(e) => {
-            e.stopPropagation();
-            e.preventDefault();
             if (github && github !== "#") {
+              e.stopPropagation();
               window.open(github, '_blank', 'noopener,noreferrer');
+            } else {
+              e.preventDefault();
             }
           }}
         >
