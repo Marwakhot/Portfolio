@@ -108,6 +108,7 @@ const pastActivities = [
 
 const Index = () => {
   const projectsRef = useRef<HTMLDivElement>(null);
+  const [hasSpread, setHasSpread] = useState(false);
   
   // Track when projects section hits the top of viewport
   const { scrollYProgress: projectsScrollProgress } = useScroll({
@@ -117,6 +118,16 @@ const Index = () => {
 
   // Card spread animation - only starts when section is at top
   const spread = useTransform(projectsScrollProgress, [0, 0.5], [0, 1]);
+  
+  // Lock the spread once it's complete
+  useState(() => {
+    const unsubscribe = spread.on("change", (latest) => {
+      if (latest >= 0.95 && !hasSpread) {
+        setHasSpread(true);
+      }
+    });
+    return unsubscribe;
+  });
 
   return (
     <div className="bg-background">
@@ -186,11 +197,18 @@ const Index = () => {
                   <motion.div
                     key={project.title}
                     className="absolute w-[300px] md:w-[360px]"
-                    style={{
+                    initial={false}
+                    animate={hasSpread ? {
+                      top: row * 290,
+                      left: col === 0 ? '5%' : '55%',
+                      rotate: 0,
+                      scale: 1,
+                    } : undefined}
+                    style={hasSpread ? undefined : {
                       top: useTransform(
                         spread,
                         [0, 1],
-                        [50 + index * 12, row * 290]
+                        [100 + index * 15, row * 290]
                       ),
                       left: useTransform(
                         spread,
