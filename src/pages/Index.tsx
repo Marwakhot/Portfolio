@@ -158,8 +158,8 @@ const Index = () => {
       </section>
 
       {/* Projects Section - Sticky with cards spreading */}
-      <section ref={projectsRef} className="min-h-[200vh] mt-0">
-        <div className="sticky top-0 h-screen flex items-center pt-48">
+      <section ref={projectsRef} className="min-h-[200vh] mt-15">
+        <div className="sticky top-0 h-screen flex items-center pt-24">
           <div className="container mx-auto px-6 flex flex-row items-center gap-12">
             {/* Left side - Title */}
             <motion.div 
