@@ -172,6 +172,8 @@ const Index = () => {
                 look into my{" "}
                 <span className="text-funky-teal">projects</span>
               </h2>
+
+              <div className="mt-4 h-1 w-24 bg-funky-yellow rounded-full" />
               {/* Journey Section */}
       <section className="min-h-screen py-24 -mt-[440px]">
         <div className="container mx-auto px-6">
@@ -260,7 +262,6 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
-              <div className="mt-4 h-1 w-24 bg-funky-yellow rounded-full" />
             </motion.div>
 
             {/* Right side - Stacked Cards that spread to 2-column grid */}
