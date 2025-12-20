@@ -158,10 +158,10 @@ const Index = () => {
       </section>
 
       {/* Projects Section - Sticky with cards spreading */}
-      <section ref={projectsRef} className="min-h-[300vh] mt-60">
-        <div className="sticky top-0 h-screen flex items-center pt-24 overflow-visible">
+      <section ref={projectsRef} className="min-h-[200vh] mt-60">
+        <div className="sticky top-0 h-screen flex items-center pt-24">
           <div className="container mx-auto px-6 flex flex-row items-center gap-12">
-            {/* Left side - Title and Journey */}
+            {/* Left side - Title */}
             <motion.div 
               className="w-1/3 flex-shrink-0 -mt-96"
               initial={{ opacity: 0, x: -50 }}
@@ -173,87 +173,10 @@ const Index = () => {
                 <span className="text-funky-teal">projects</span>
               </h2>
               <div className="mt-4 h-1 w-24 bg-funky-yellow rounded-full" />
-
-              {/* Journey Section - moved here */}
-              <div className="mt-16">
-                {/* Currently I'm */}
-                <div className="mb-12">
-                  <h3 className="text-xl md:text-2xl font-outfit font-bold text-foreground mb-6">
-                    Currently I'm
-                  </h3>
-                  <div className="relative">
-                    {/* Vertical line */}
-                    <div className="absolute left-2 top-0 bottom-0 w-1 bg-funky-pink" />
-                    <div className="space-y-6">
-                      {currentActivities.map((item, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: index * 0.1 }}
-                          className="relative flex items-start gap-4"
-                        >
-                          <div className="w-4 h-4 rounded-full bg-funky-pink border-4 border-background shadow-lg z-10 flex-shrink-0" />
-                          <div className="-mt-1 relative group">
-                            <h4 className={`text-base font-outfit font-bold ${item.color} group-hover:underline cursor-pointer`}>{item.title}</h4>
-                            <p className="text-muted-foreground font-space text-xs">{item.period}</p>
-                            <p className="text-foreground font-space text-sm">{item.place}</p>
-                            
-                            {/* Hover tooltip */}
-                            <div className="absolute left-full ml-6 top-0 w-80 p-4 bg-card border border-border rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                              <div className="absolute -left-2 top-4 w-4 h-4 bg-card border-l border-t border-border rotate-[-45deg]" />
-                              <h5 className={`font-outfit font-bold ${item.color} mb-2`}>{item.title}</h5>
-                              <p className="text-muted-foreground font-space text-sm leading-relaxed">{item.details}</p>
-                            </div>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* I've been */}
-                <div>
-                  <h3 className="text-xl md:text-2xl font-outfit font-bold text-foreground mb-6">
-                    I've been
-                  </h3>
-                  <div className="relative">
-                    {/* Vertical line */}
-                    <div className="absolute left-2 top-0 bottom-0 w-1 bg-funky-orange" />
-                    <div className="space-y-6">
-                      {pastActivities.map((item, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: index * 0.1 }}
-                          className="relative flex items-start gap-4"
-                        >
-                          <div className="w-4 h-4 rounded-full bg-funky-orange border-4 border-background shadow-lg z-10 flex-shrink-0" />
-                          <div className="-mt-1 relative group">
-                            <h4 className="text-sm font-outfit font-bold text-foreground group-hover:underline cursor-pointer">{item.title}</h4>
-                            <p className="text-funky-teal font-space text-xs">{item.period}</p>
-                            <p className="text-muted-foreground font-space text-xs">{item.place}</p>
-                            
-                            {/* Hover tooltip */}
-                            <div className="absolute left-full ml-6 top-0 w-80 p-4 bg-card border border-border rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                              <div className="absolute -left-2 top-4 w-4 h-4 bg-card border-l border-t border-border rotate-[-45deg]" />
-                              <h5 className="font-outfit font-bold text-funky-orange mb-2">{item.title}</h5>
-                              <p className="text-muted-foreground font-space text-sm leading-relaxed">{item.details}</p>
-                            </div>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
             </motion.div>
 
             {/* Right side - Stacked Cards that spread to 2-column grid */}
-            <div className="w-2/3 relative h-[1400px] pointer-events-none">
+            <div className="w-2/3 relative h-[1100px] pointer-events-none">
               {projects.map((project, index) => {
                 const row = Math.floor(index / 2);
                 const col = index % 2;
@@ -304,6 +227,94 @@ const Index = () => {
               })}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Journey Section */}
+      <section className="min-h-screen py-24 -mt-[440px]">
+        <div className="container mx-auto px-6">
+          {/* Currently I'm */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-20"
+          >
+            <h3 className="text-2xl md:text-3xl font-outfit font-bold text-foreground mb-8">
+              Currently I'm
+            </h3>
+            <div className="relative">
+              {/* Vertical line */}
+              <div className="absolute left-2 top-0 bottom-0 w-1 bg-funky-pink" />
+              <div className="space-y-8">
+                {currentActivities.map((item, index) => (
+                  <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="relative flex items-start gap-6"
+                >
+                  <div className="w-5 h-5 rounded-full bg-funky-pink border-4 border-background shadow-lg z-10 flex-shrink-0" />
+                  <div className="-mt-1 relative group">
+                    <h4 className={`text-xl font-outfit font-bold ${item.color} group-hover:underline cursor-pointer`}>{item.title}</h4>
+                    <p className="text-muted-foreground font-space text-sm">{item.period}</p>
+                    <p className="text-foreground font-space">{item.place}</p>
+                    
+                    {/* Hover tooltip */}
+                    <div className="absolute left-full ml-6 top-0 w-80 p-4 bg-card border border-border rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="absolute -left-2 top-4 w-4 h-4 bg-card border-l border-t border-border rotate-[-45deg]" />
+                      <h5 className={`font-outfit font-bold ${item.color} mb-2`}>{item.title}</h5>
+                      <p className="text-muted-foreground font-space text-sm leading-relaxed">{item.details}</p>
+                    </div>
+                  </div>
+                </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+          {/* I've been */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl md:text-3xl font-outfit font-bold text-foreground mb-8">
+              I've been
+            </h3>
+            <div className="relative">
+              {/* Vertical line */}
+              <div className="absolute left-2 top-0 bottom-0 w-1 bg-funky-orange" />
+              <div className="space-y-8">
+                {pastActivities.map((item, index) => (
+                  <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="relative flex items-start gap-6"
+                >
+                  <div className="w-5 h-5 rounded-full bg-funky-orange border-4 border-background shadow-lg z-10 flex-shrink-0" />
+                  <div className="-mt-1 relative group">
+                    <h4 className="text-lg font-outfit font-bold text-foreground group-hover:underline cursor-pointer">{item.title}</h4>
+                    <p className="text-funky-teal font-space text-sm">{item.period}</p>
+                    <p className="text-muted-foreground font-space text-sm">{item.place}</p>
+                    
+                    {/* Hover tooltip */}
+                    <div className="absolute left-full ml-6 top-0 w-80 p-4 bg-card border border-border rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="absolute -left-2 top-4 w-4 h-4 bg-card border-l border-t border-border rotate-[-45deg]" />
+                      <h5 className="font-outfit font-bold text-funky-orange mb-2">{item.title}</h5>
+                      <p className="text-muted-foreground font-space text-sm leading-relaxed">{item.details}</p>
+                    </div>
+                  </div>
+                </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
