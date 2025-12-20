@@ -9,7 +9,7 @@ const projects = [
     description: "Solves slow bug assignment by using NLP and ML to automatically predict the responsible team and priority for each bug report, handling bulk predictions via a Streamlit dashboard.", 
     techStack: "Python • NLP (TF-IDF) • LightGBM • Flask API • Streamlit • Docker",
     color: "bg-funky-pink", 
-    github: "#" 
+    github: "https://github.com/Marwakhot/bug-triage-nlp-api" 
   },
   { 
     title: "AI Safety Audit: Credit Fairness", 
