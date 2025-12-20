@@ -74,15 +74,20 @@ const HangingIDCard = () => {
           </div>
 
           {/* Name */}
-          <div className="text-center mt-16 px-4">
+          <div className="text-center mt-12 px-4">
             <h3 className="font-outfit font-bold text-foreground text-xl">Marwa</h3>
             <p className="font-space text-sm text-muted-foreground mt-2">CS Student</p>
             <p className="font-space text-sm text-funky-pink mt-1">AI & Big Data</p>
             
+            {/* Contact Info */}
+            <div className="mt-3 space-y-1">
+              <p className="font-space text-xs text-foreground/60">marwakhot007@gmail.com</p>
+              <p className="font-space text-xs text-foreground/60">+971 58 588 5323</p>
+            </div>
             {/* Social Links */}
             <div className="flex justify-center gap-3 mt-4">
               <a 
-                href="https://linkedin.com/in/yourprofile" 
+                href="https://www.linkedin.com/in/marwa-khot-238482353/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gradient-to-br from-funky-teal/20 to-funky-pink/20 flex items-center justify-center hover:from-funky-teal/40 hover:to-funky-pink/40 transition-all duration-300 group"
@@ -90,7 +95,7 @@ const HangingIDCard = () => {
                 <Linkedin className="w-5 h-5 text-foreground/70 group-hover:text-funky-teal transition-colors" />
               </a>
               <a 
-                href="https://github.com/yourusername" 
+                href="https://github.com/Marwakhot" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gradient-to-br from-funky-teal/20 to-funky-pink/20 flex items-center justify-center hover:from-funky-teal/40 hover:to-funky-pink/40 transition-all duration-300 group"
