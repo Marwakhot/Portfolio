@@ -13,7 +13,7 @@ const projects = [
   },
   { 
     title: "AI Safety Audit: Credit Fairness", 
-    description: "Fixed the 'black box' problem in a loan-approval AI by finding hidden biases and creating a safety roadmap to prevent legal and ethical risks.", 
+    description: "Fixed the 'black box' problem in a loan-approval AI by finding hidden biases and creating a safety roadmap to prevent legal and ethical risks. safety roadmap to prevent legal and ethical risks.", 
     techStack: "Python • Fairlearn • Scikit-learn • NIST AI RMF",
     color: "bg-funky-teal", 
     github: "#" 
