@@ -56,7 +56,7 @@ const projects = [
   { 
     title: "Quantopian Failure Analysis", 
     description: "Solves the problem of understanding why well-funded fintech startups fail by pinpointing critical project management gaps in scope, risk, and communication using the PMBOK framework", 
-    techStack: "PMBOK Framework • Case Study Research",
+    techStack: "PMBOK Framework • Case Study Research • Risk & Scope Analysis",
     color: "bg-funky-teal", 
     github: "https://github.com/Marwakhot/Quantopian_Failure_Analysis" 
   },
