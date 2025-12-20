@@ -25,13 +25,13 @@ const ProjectCard = ({ title, description, techStack, color, index, github }: Pr
       <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-white/20 to-transparent pointer-events-none" />
       
       <div className="relative z-10">
-        <h3 className="text-xl font-bold font-outfit text-foreground group-hover:text-funky-purple transition-colors leading-tight">
+        <h3 className="text-xl font-bold font-outfit text-white group-hover:text-funky-purple transition-colors leading-tight">
           {title}
         </h3>
       </div>
       
       <div className="relative z-10 flex flex-col gap-2">
-        <p className="text-foreground/70 font-space text-xs leading-relaxed">{description}</p>
+        <p className="text-white/90 font-space text-xs leading-relaxed">{description}</p>
         
         {/* Tech Stack */}
         {techStack && (
@@ -39,7 +39,7 @@ const ProjectCard = ({ title, description, techStack, color, index, github }: Pr
             {techStack.split('•').map((tech, i) => (
               <span 
                 key={i}
-                className="text-[10px] font-space font-semibold text-foreground/90 bg-foreground/10 px-2 py-0.5 rounded-full"
+                className="text-[10px] font-space font-semibold text-white/95 bg-foreground/10 px-2 py-0.5 rounded-full"
               >
                 {tech.trim()}
               </span>

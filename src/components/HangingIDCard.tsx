@@ -69,13 +69,13 @@ const HangingIDCard = () => {
 
           {/* Name */}
           <div className="text-center mt-8 px-4">
-            <p className="font-space text-sm text-muted-foreground mt-1">CS Student</p>
-            <p className="font-space text-sm text-funky-pink mt-0.5">AI & Big Data</p>
+            <p className="font-space text-base text-muted-foreground mt-1">CS Student</p>
+            <p className="font-space text-base text-funky-pink mt-0.5">AI & Big Data</p>
             
             {/* Contact Info */}
             <div className="mt-2 space-y-0.5">
-              <p className="font-space text-xs text-foreground/60">marwakhot007@gmail.com</p>
-              <p className="font-space text-xs text-foreground/60">+971 58 588 5323</p>
+              <p className="font-space text-base text-foreground/60">marwakhot007@gmail.com</p>
+              <p className="font-space text-base text-foreground/60">+971 58 588 5323</p>
             </div>
             {/* Social Links */}
             <div className="flex justify-center gap-3 mt-2">
