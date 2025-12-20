@@ -158,8 +158,8 @@ const Index = () => {
       </section>
 
       {/* Projects Section - Sticky with cards spreading */}
-      <section ref={projectsRef} className="min-h-[180vh] mt-40 mb-[-20vh]">
-        <div className="sticky top-0 h-screen flex items-center pt-24">
+      <section ref={projectsRef} className="min-h-[150vh] mt-20 mb-[-10vh]">
+        <div className="sticky top-0 h-screen flex items-center pt-12 overflow-visible">
           <div className="container mx-auto px-6 flex flex-row items-center gap-12">
             {/* Left side - Title */}
             <motion.div 
@@ -176,7 +176,7 @@ const Index = () => {
             </motion.div>
 
             {/* Right side - Stacked Cards that spread to 2-column grid */}
-            <div className="w-2/3 relative h-[1100px]">
+            <div className="w-2/3 relative h-[1000px] z-50">
               {projects.map((project, index) => {
                 const row = Math.floor(index / 2);
                 const col = index % 2;
@@ -227,7 +227,7 @@ const Index = () => {
       </section>
 
       {/* Journey Section */}
-      <section className="min-h-screen py-24 relative z-10 bg-background">
+      <section className="min-h-screen py-24 relative z-0 bg-transparent">
         <div className="container mx-auto px-6">
           {/* Currently I'm */}
           <motion.div
