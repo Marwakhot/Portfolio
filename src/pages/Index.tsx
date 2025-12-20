@@ -137,13 +137,14 @@ const Index = () => {
       </section>
 
       {/* Main Content Section - Projects & Journey Side-by-Side */}
-      <section ref={projectsRef} className="min-h-[250vh] mt-20">
-        <div className="sticky top-0 h-screen flex items-center">
+      {/* Increased min-h to [350vh] to give more scroll room for all rows */}
+      <section ref={projectsRef} className="min-h-[350vh] mt-20">
+        <div className="sticky top-0 h-screen flex items-center overflow-hidden">
           <div className="container mx-auto px-6 flex flex-row items-start gap-12">
             
             {/* Left side - Title + Journey */}
             <motion.div 
-              className="w-1/3 flex-shrink-0"
+              className="w-1/3 flex-shrink-0 pt-10"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -154,7 +155,6 @@ const Index = () => {
               </h2>
               <div className="mt-4 h-1 w-24 bg-funky-yellow rounded-full mb-12" />
 
-              {/* Journey Content Integrated Here */}
               <div className="space-y-10">
                 <div>
                   <h3 className="text-xl font-outfit font-bold text-foreground mb-4 uppercase tracking-wider">Currently</h3>
@@ -183,7 +183,7 @@ const Index = () => {
             </motion.div>
 
             {/* Right side - Stacked Cards */}
-            <div className="w-2/3 relative h-[800px]">
+            <div className="w-2/3 relative h-[85vh]">
               {projects.map((project, index) => {
                 const row = Math.floor(index / 2);
                 const col = index % 2;
@@ -194,7 +194,9 @@ const Index = () => {
                     key={project.title}
                     className="absolute w-[300px] md:w-[350px] pointer-events-auto"
                     style={{
-                      top: useTransform(spread, [0, 1], [index * 12, row * 270]),
+                      // Adjusted vertical spacing: row * 260 ensures they don't overlap too much
+                      // Lowered the starting 'top' when spread=1 to move cards higher up
+                      top: useTransform(spread, [0, 1], [index * 12, row * 260 - 40]),
                       left: useTransform(
                         spread,
                         [0, 1],
