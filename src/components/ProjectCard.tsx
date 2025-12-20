@@ -51,14 +51,15 @@ const ProjectCard = ({ title, description, techStack, color, index, github }: Pr
           href={github || "#"} 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors w-fit mt-1 relative z-20"
-          onClick={(e) => e.stopPropagation()}
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors w-fit mt-1 relative z-[100] pointer-events-auto"
+          onClick={(e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            if (github && github !== "#") {
+              window.open(github, '_blank', 'noopener,noreferrer');
+            }
+          }}
         >
-          <Github className="w-4 h-4 text-white/70" />
-          <span className="text-xs font-space text-white/70">
-            GitHub
-          </span>
-        </a>
       </div>
       
       {/* Tech dots decoration */}
