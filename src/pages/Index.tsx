@@ -13,7 +13,7 @@ const projects = [
   },
   { 
     title: "AI Safety Audit: Credit Fairness", 
-    description: "Fixed the 'black box' problem in a loan-approval AI by finding hidden biases and creating a safety roadmap to prevent legal and ethical risks. safety roadmap to prevent legal and ethical risks.", 
+    description: "Solved the problem of black box AI discrimination by auditing a loan-approval model to detect hidden biases and implementing a NIST-based risk framework that transformed a high-liability system into a safe, compliant, and transparent business asset.", 
     techStack: "Python • Fairlearn • Scikit-learn • NIST AI RMF",
     color: "bg-funky-teal", 
     github: "#" 
@@ -48,14 +48,14 @@ const projects = [
   },
   { 
     title: "Stratify", 
-    description: "Helps automotive companies manage the transition to EVs by providing real-time KPI tracking, sustainability monitoring, and operational insights to optimize resource use.", 
-    techStack: "System Design • UML Modeling",
+    description: "Solves the challenge of helping traditional automakers transition to EV manufacturing by providing real-time visibility, sustainability tracking, and data-driven strategic planning in one system.", 
+    techStack: "Enterprise System Design • UML Modeling • Agile Methodology",
     color: "bg-funky-pink", 
     github: "https://github.com/Marwakhot/Stratify" 
   },
   { 
     title: "Quantopian Failure Analysis", 
-    description: "Explains the failure of a $48M fintech startup by identifying weaknesses in scope control, risk monitoring, and stakeholder communication using PMBOK principles.", 
+    description: "Solves the problem of understanding why well-funded fintech startups fail by pinpointing critical project management gaps in scope, risk, and communication using the PMBOK framework", 
     techStack: "PMBOK Framework • Case Study Research",
     color: "bg-funky-teal", 
     github: "https://github.com/Marwakhot/Quantopian_Failure_Analysis" 
