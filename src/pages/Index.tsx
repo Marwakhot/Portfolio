@@ -159,11 +159,11 @@ const Index = () => {
 
       {/* Projects Section - Sticky with cards spreading */}
       <section ref={projectsRef} className="min-h-[200vh] mt-60">
-        <div className="sticky top-0 h-screen flex items-center pt-24 pointer-events-none">
+        <div className="sticky top-0 h-screen flex items-center pt-24">
           <div className="container mx-auto px-6 flex flex-row items-center gap-12">
             {/* Left side - Title */}
             <motion.div 
-              className="w-1/3 flex-shrink-0 -mt-96 pointer-events-auto"
+              className="w-1/3 flex-shrink-0 -mt-96"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -176,7 +176,7 @@ const Index = () => {
             </motion.div>
 
             {/* Right side - Stacked Cards that spread to 2-column grid */}
-            <div className="w-2/3 relative h-[1100px]">
+            <div className="w-2/3 relative h-[1100px] pointer-events-none">
               {projects.map((project, index) => {
                 const row = Math.floor(index / 2);
                 const col = index % 2;
@@ -185,7 +185,7 @@ const Index = () => {
                 return (
                   <motion.div
                     key={project.title}
-                    className="absolute w-[300px] md:w-[360px] pointer-events-auto"
+                    className="absolute w-[300px] md:w-[360px]"
                    style={{
   top: useTransform(
     spread,
@@ -231,7 +231,7 @@ const Index = () => {
       </section>
 
       {/* Journey Section */}
-      <section className="min-h-screen py-24 -mt-[440px] relative z-30">
+      <section className="min-h-screen py-24 -mt-[440px]">
         <div className="container mx-auto px-6">
           {/* Currently I'm */}
           <motion.div
