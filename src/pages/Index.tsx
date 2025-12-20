@@ -23,42 +23,42 @@ const projects = [
     description: "Prevents extreme portfolio losses by calculating risk-adjusted capital requirements for a $1,000,000 portfolio, recommending a $21,578 daily capital reserve using 3 VaR models.", 
     techStack: "Python • Pandas • NumPy • SciPy • Monte Carlo Simulation",
     color: "bg-funky-yellow", 
-    github: "#" 
+    github: "https://github.com/Marwakhot/QuantRisk-VaR-Validation" 
   },
   { 
     title: "PEAR Internships Platform", 
     description: "A full-stack web application that connects students and companies by streamlining internship postings, applications, and application tracking through role-based dashboards.", 
     techStack: "HTML • JavaScript • CSS • Node.js • MySQL • REST APIs",
     color: "bg-funky-orange", 
-    github: "#" 
+    github: "https://github.com/Marwakhot/pear-internships" 
   },
   { 
     title: "Robot Navigation Using AI", 
     description: "Solves autonomous navigation challenges in a 10m × 10m simulated arena by implementing Fuzzy Logic, Behavior Trees, and Q-Learning for obstacle avoidance.", 
     techStack: "Python • Fuzzy Logic • Behavior Trees • Reinforcement Learning (Q-Learning)",
     color: "bg-funky-purple", 
-    github: "#" 
+    github: "https://github.com/Marwakhot/Gazebo_robot_navigation" 
   },
   { 
     title: "Brain Brew", 
     description: "An AI-powered platform that tackles passive PDF learning by using AI to ask thought-provoking questions, making students think critically with 4 adaptive difficulty levels.", 
     techStack: "React • TypeScript • Supabase • PostgreSQL • Three.js • Tailwind CSS",
     color: "bg-funky-green", 
-    github: "#" 
+    github: "https://github.com/Marwakhot/BrainBrew" 
   },
   { 
     title: "Stratify", 
     description: "Helps automotive companies manage the transition to EVs by providing real-time KPI tracking, sustainability monitoring, and operational insights to optimize resource use.", 
     techStack: "System Design • UML Modeling",
     color: "bg-funky-pink", 
-    github: "#" 
+    github: "https://github.com/Marwakhot/Stratify" 
   },
   { 
     title: "Quantopian Failure Analysis", 
     description: "Explains the failure of a $48M fintech startup by identifying weaknesses in scope control, risk monitoring, and stakeholder communication using PMBOK principles.", 
     techStack: "PMBOK Framework • Case Study Research",
     color: "bg-funky-teal", 
-    github: "#" 
+    github: "https://github.com/Marwakhot/Quantopian_Failure_Analysis" 
   },
 ];
 
