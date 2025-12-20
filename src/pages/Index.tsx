@@ -190,7 +190,7 @@ const Index = () => {
                       top: useTransform(
                         spread,
                         [0, 1],
-                        [index * 12, row * 290]
+                        [50 + index * 12, row * 290]
                       ),
                       left: useTransform(
                         spread,
