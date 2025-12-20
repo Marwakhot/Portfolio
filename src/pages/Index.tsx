@@ -183,7 +183,7 @@ const Index = () => {
                 const totalCards = projects.length;
                 
                 return (
-                  <motion.div
+                  <div
                     key={project.title}
                     className="absolute w-[300px] md:w-[360px]"
                     style={{
@@ -218,7 +218,7 @@ const Index = () => {
                       index={index}
                       github={project.github}
                     />
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
