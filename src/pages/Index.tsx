@@ -68,14 +68,14 @@ const currentActivities = [
     period: "Oct 2025 - April 2026", 
     place: "Alamar", 
     color: "text-funky-orange",
-    details: "Working on machine learning models for predictive analytics, data visualization dashboards, and automated reporting systems. Collaborating with cross-functional teams to derive actionable insights from large datasets."
+    details: "Building analytical tables using AWS and Redshift to support quarterly reporting and business insights. Collaborating with stakeholders to transform raw data into structured, decision-ready datasets."
   },
   { 
     title: "Studying Bachelor of Computer Science", 
     period: "Major: AI and Big Data", 
     place: "University of Wollongong Dubai", 
     color: "text-funky-teal",
-    details: "Pursuing a comprehensive curriculum covering artificial intelligence, machine learning, data mining, and big data technologies. Engaged in research projects and hands-on labs to build practical skills."
+    details: "Pursuing a strong foundation in machine learning, data systems, and scalable computing."
   },
 ];
 
@@ -84,26 +84,26 @@ const pastActivities = [
     title: "Gitex Representative", 
     period: "Oct 2025", 
     place: "dreamloop.ai",
-    details: "Represented dreamloop.ai at GITEX Global, one of the world's largest tech exhibitions. Demonstrated AI products to potential clients and partners, engaging with industry leaders."
+    details: "Represented dreamloop.ai at GITEX Global, one of the world's largest tech exhibitions.Presented AI products to potential clients and investors, translating technical concepts into clear value propositions."
+  },
+  { 
+    title: "School Headgirl", 
+    period: "2023-2024", 
+    place: "NIMS",
+    details: "Led a 35+ member student council, driving initiatives and representing the student body. Planned and executed multiple inter-school events, coordinating teams and logistics at scale."
+  },
+  { 
+    title: "Director General NIMSMUN", 
+    period: "2023-2024", 
+    place: "NIMS",
+    details: "Oversaw a 150+ delegate Model United Nations conference conducted over three days. Managed committees, executive teams, and event operations to ensure smooth end-to-end execution."
   },
   { 
     title: "High School Diploma", 
     period: "2022-2024", 
     place: "NIMS, Dubai",
     details: "Completed high school with distinction, focusing on science and mathematics. Participated in various extracurricular activities and academic competitions."
-  },
-  { 
-    title: "School Headgirl", 
-    period: "2023-2024", 
-    place: "NIMS",
-    details: "Led student body initiatives, organized school events, and served as the primary liaison between students and administration. Developed leadership and public speaking skills."
-  },
-  { 
-    title: "Director General NIMSMUN", 
-    period: "2023-2024", 
-    place: "NIMS",
-    details: "Directed the Model United Nations conference, overseeing committee formations, delegate training, and event logistics. Managed a team of executive board members and chairs."
-  },
+  }
 ];
 
 const Index = () => {
