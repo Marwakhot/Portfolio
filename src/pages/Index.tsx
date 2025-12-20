@@ -195,7 +195,7 @@ const Index = () => {
   left: useTransform(
     spread,
     [0, 1],
-    [`calc(50% - 150px + ${index * 8}px)`, col === 0 ? '5%' : '55%']
+    [`calc(50% - 150px + ${index * 8}px)`, col === 0 ? '5%' : '52%']
   ),
   rotate: useTransform(
     spread,
@@ -231,7 +231,7 @@ const Index = () => {
       </section>
 
       {/* Journey Section */}
-<section className="min-h-screen py-24 px-6 mt-96">
+<section className="min-h-screen py-24 px-6 mt-[500px]">
   <div className="container mx-auto">
     {/* Currently I'm */}
     <motion.div
