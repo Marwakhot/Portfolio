@@ -16,7 +16,7 @@ const projects = [
     description: "Solved the problem of black box AI discrimination by auditing a loan-approval model to detect hidden biases and implementing a NIST-based risk framework that transformed a high-liability system into a safe, compliant, and transparent business asset.", 
     techStack: "Python • Fairlearn • Scikit-learn • NIST AI RMF",
     color: "bg-funky-teal", 
-    github: "#" 
+    github: "https://github.com/Marwakhot/-AI-Risk-Management-Audit" 
   },
   { 
     title: "Portfolio Capital Optimization", 
