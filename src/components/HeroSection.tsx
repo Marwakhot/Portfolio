@@ -8,7 +8,7 @@ const HeroSection = () => {
   };
 
   const scrollToExperience = () => {
-    document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('hackathons')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (

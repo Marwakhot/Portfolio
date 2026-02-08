@@ -1,21 +1,19 @@
-import { Trophy, Users, Github, Sparkles } from "lucide-react";
+import { Trophy, Sparkles, Github } from "lucide-react";
 
 const HackathonsSection = () => {
     const hackathons = [
         {
             title: "Space42 Bounty Challenge - 3rd Place 🏆",
             event: "Google Developers Group on Campus: University of Birmingham Dubai",
-            team: "Zahny Fathima, Hudha Ibrahim, Amsha Nasar",
+            date: "Nov 2024",
             project: "ORION - AI-Powered Talent & Onboarding Partner",
-            description: "Our team won 3rd place at the Bounty Challenge, hosted by the Google Developers Group on Campus: University of Birmingham Dubai. We built ORION, an AI-powered talent and onboarding partner that revolutionizes the hiring process.",
+            description: "Won 3rd place building ORION, an AI-powered talent and onboarding partner built in a single weekend.",
             features: [
                 "CV upload with instant eligibility matching against non-negotiable job skills",
-                "Behavioral AI assessment through voice or text, plus parallel technical CV evaluation",
-                "Combined scoring system that ranks candidates directly on the HR dashboard for smart shortlisting",
-                "Real-time application status tracking for candidates",
-                "Conversational AI chatbot powered by LangChain and RAG that understands company documents and answers candidate questions instantly",
-                "Employee zone unlock with a structured Day One plan upon acceptance",
-                "A Talent Orbit for rejected candidates, allowing CV updates and continuous re-ranking for future roles"
+                "Behavioral AI assessment through voice or text with parallel technical CV evaluation",
+                "Combined scoring system ranking candidates on HR dashboard for smart shortlisting",
+                "Conversational AI chatbot powered by LangChain and RAG",
+                "Employee zone unlock with structured Day One plan upon acceptance"
             ],
             techStack: "React, TypeScript, Node.js, LangChain, RAG, AI/ML",
             github: "https://github.com/Marwakhot/space42_final",
@@ -26,10 +24,11 @@ const HackathonsSection = () => {
             badgeColor: "bg-gradient-to-r from-amber-500 to-orange-500"
         },
         {
-            title: "BITS Pilani Hackathon - Participant",
+            title: "BITS Pilani Hackathon",
             event: "BITS Pilani Dubai Campus",
+            date: "2024",
             project: "Brain Brew - AI-Powered Learning Platform",
-            description: "Participated in the BITS Pilani hackathon, presenting Brain Brew, an innovative AI-powered platform designed to transform passive PDF learning into an engaging, interactive experience.",
+            description: "Built Brain Brew, an innovative AI-powered platform designed to transform passive PDF learning into an engaging, interactive experience.",
             features: [
                 "AI-powered platform that asks thought-provoking questions instead of providing direct answers",
                 "4 adaptive difficulty levels to match learner progress",
@@ -39,7 +38,7 @@ const HackathonsSection = () => {
             ],
             techStack: "React, TypeScript, Supabase, PostgreSQL, Three.js, Tailwind CSS",
             github: "https://github.com/Marwakhot/BrainBrew",
-            icon: <Users className="w-5 h-5" />,
+            icon: <Trophy className="w-5 h-5" />,
             bgColor: "bg-gradient-to-br from-violet-100 via-purple-50 to-fuchsia-100",
             borderColor: "border-violet-300",
             titleColor: "text-violet-700",
@@ -60,7 +59,7 @@ const HackathonsSection = () => {
                         <h2 className="text-4xl md:text-5xl font-bold">
                             Hackathon{" "}
                             <span className="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-                                Adventures
+                                Wins
                             </span>
                         </h2>
                     </div>
@@ -95,11 +94,9 @@ const HackathonsSection = () => {
                                 <p className="text-sm font-semibold text-foreground/70">
                                     📍 {hackathon.event}
                                 </p>
-                                {hackathon.team && (
-                                    <p className="text-sm text-foreground/70">
-                                        <span className="font-semibold">Team:</span> {hackathon.team}
-                                    </p>
-                                )}
+                                <p className="text-sm text-foreground/60">
+                                    📅 {hackathon.date}
+                                </p>
                                 <p className="text-sm font-bold text-foreground/90">
                                     🚀 {hackathon.project}
                                 </p>

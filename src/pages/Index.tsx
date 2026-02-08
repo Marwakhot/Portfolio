@@ -1,7 +1,8 @@
 import HeroSection from "@/components/HeroSection";
 import CurrentSection from "@/components/CurrentSection";
 import ProjectsSection from "@/components/ProjectsSection";
-import TimelineSection from "@/components/TimelineSection";
+import HackathonsSection from "@/components/HackathonsSection";
+import HistorySection from "@/components/HistorySection";
 
 const Index = () => {
   return (
@@ -9,7 +10,8 @@ const Index = () => {
       <HeroSection />
       <ProjectsSection />
       <CurrentSection />
-      <TimelineSection />
+      <HackathonsSection />
+      <HistorySection />
     </main>
   );
 };

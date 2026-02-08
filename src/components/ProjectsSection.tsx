@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Github, Brain, Shield, TrendingUp, Code2, Sparkles, Zap, Target, Wrench } from "lucide-react";
+import { Github, Brain, Shield, TrendingUp, Sparkles, Zap, Target, Wrench } from "lucide-react";
 
 interface Project {
   title: string;
@@ -23,13 +23,27 @@ interface Category {
 const categories: Category[] = [
   {
     id: "ai-ml",
-    name: "AI & Machine Learning",
+    name: "AI Full Stack Platforms",
     icon: <Brain className="w-5 h-5" />,
     tabColor: "bg-gradient-to-r from-violet-500 to-purple-600 text-white border-violet-400",
     cardBg: "bg-gradient-to-br from-violet-100 via-purple-50 to-fuchsia-100",
     accent: "text-violet-700",
     btnColor: "bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700",
     projects: [
+      {
+        title: "ORION - AI Talent & Onboarding Partner",
+        problem: "Manual hiring processes are slow, biased, and lack structured onboarding for new employees.",
+        solution: "Built an end-to-end HR platform with AI-powered CV matching, behavioral assessments, conversational chatbot using LangChain & RAG, and automated onboarding workflows.",
+        techStack: "React, TypeScript, Node.js, LangChain, RAG, AI/ML, PostgreSQL",
+        github: "https://github.com/Marwakhot/space42_final"
+      },
+      {
+        title: "Brain Brew",
+        problem: "Passive PDF learning not engaging students in critical thinking.",
+        solution: "Created an AI-powered platform that asks thought-provoking questions instead of direct answers, using NLP to generate adaptive difficulty levels that promote deeper understanding.",
+        techStack: "React, TypeScript, AI/ML, NLP, Supabase, PostgreSQL, Three.js",
+        github: "https://github.com/Marwakhot/BrainBrew"
+      },
       {
         title: "Automated Bug Triage System",
         problem: "Slow bug assignment causing delays in development cycles and inefficient resource allocation.",
@@ -43,13 +57,6 @@ const categories: Category[] = [
         solution: "Implemented Fuzzy Logic, Behavior Trees, and Q-Learning for obstacle avoidance in a 10m × 10m simulated arena.",
         techStack: "Python, Fuzzy Logic, Behavior Trees, Reinforcement Learning (Q-Learning)",
         github: "https://github.com/Marwakhot/Gazebo_robot_navigation"
-      },
-      {
-        title: "Brain Brew",
-        problem: "Passive PDF learning not engaging students in critical thinking.",
-        solution: "Created an AI-powered platform that asks thought-provoking questions instead of direct answers, using NLP to generate adaptive difficulty levels that promote deeper understanding.",
-        techStack: "React, TypeScript, AI/ML, NLP, Supabase, PostgreSQL, Three.js",
-        github: "https://github.com/Marwakhot/BrainBrew"
       }
     ]
   },
@@ -102,38 +109,6 @@ const categories: Category[] = [
         github: "https://github.com/Marwakhot/Stratify"
       }
     ]
-  },
-  {
-    id: "fullstack",
-    name: "Full-Stack Platforms",
-    icon: <Code2 className="w-5 h-5" />,
-    tabColor: "bg-gradient-to-r from-rose-500 to-pink-600 text-white border-rose-400",
-    cardBg: "bg-gradient-to-br from-rose-100 via-pink-50 to-fuchsia-100",
-    accent: "text-rose-700",
-    btnColor: "bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700",
-    projects: [
-      {
-        title: "ORION - AI Talent & Onboarding Partner",
-        problem: "Manual hiring processes are slow, biased, and lack structured onboarding for new employees.",
-        solution: "Built an end-to-end HR platform with AI-powered CV matching, behavioral assessments, conversational chatbot using LangChain & RAG, and automated onboarding workflows.",
-        techStack: "React, TypeScript, Node.js, LangChain, RAG, AI/ML, PostgreSQL",
-        github: "https://github.com/Marwakhot/space42_final"
-      },
-      {
-        title: "PEAR Internships Platform",
-        problem: "Disconnected process for students finding internships and companies managing applications.",
-        solution: "Built a full-stack web application that connects students and companies by streamlining internship postings, applications, and tracking through role-based dashboards.",
-        techStack: "HTML, JavaScript, CSS, Node.js, MySQL, REST APIs",
-        github: "https://github.com/Marwakhot/pear-internships"
-      },
-      {
-        title: "Brain Brew",
-        problem: "Passive PDF learning not engaging students in critical thinking.",
-        solution: "Created an AI-powered platform that asks thought-provoking questions instead of direct answers, with 4 adaptive difficulty levels and immersive 3D interface.",
-        techStack: "React, TypeScript, Supabase, PostgreSQL, Three.js, Tailwind CSS",
-        github: "https://github.com/Marwakhot/BrainBrew"
-      }
-    ]
   }
 ];
 
@@ -172,13 +147,13 @@ const ProjectsSection = () => {
                   onClick={() => setActiveCategory(category.id)}
                   style={{ animationDelay: `${index * 100}ms` }}
                   className={`flex items-center gap-3 px-5 py-4 rounded-2xl border-2 font-semibold transition-all duration-500 text-left group ${activeCategory === category.id
-                      ? `${category.tabColor} shadow-xl scale-[1.03] -rotate-1`
-                      : "bg-card/80 backdrop-blur-sm text-foreground/70 border-border hover:border-foreground/30 hover:shadow-lg hover:scale-[1.02] hover:rotate-1"
+                    ? `${category.tabColor} shadow-xl scale-[1.03] -rotate-1`
+                    : "bg-card/80 backdrop-blur-sm text-foreground/70 border-border hover:border-foreground/30 hover:shadow-lg hover:scale-[1.02] hover:rotate-1"
                     }`}
                 >
                   <span className={`p-2 rounded-xl transition-all duration-300 ${activeCategory === category.id
-                      ? "bg-white/20"
-                      : "bg-muted group-hover:bg-primary/10"
+                    ? "bg-white/20"
+                    : "bg-muted group-hover:bg-primary/10"
                     }`}>
                     {category.icon}
                   </span>
