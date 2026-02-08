@@ -43,6 +43,13 @@ const categories: Category[] = [
         solution: "Implemented Fuzzy Logic, Behavior Trees, and Q-Learning for obstacle avoidance in a 10m × 10m simulated arena.",
         techStack: "Python, Fuzzy Logic, Behavior Trees, Reinforcement Learning (Q-Learning)",
         github: "https://github.com/Marwakhot/Gazebo_robot_navigation"
+      },
+      {
+        title: "Brain Brew",
+        problem: "Passive PDF learning not engaging students in critical thinking.",
+        solution: "Created an AI-powered platform that asks thought-provoking questions instead of direct answers, using NLP to generate adaptive difficulty levels that promote deeper understanding.",
+        techStack: "React, TypeScript, AI/ML, NLP, Supabase, PostgreSQL, Three.js",
+        github: "https://github.com/Marwakhot/BrainBrew"
       }
     ]
   },
@@ -106,6 +113,13 @@ const categories: Category[] = [
     btnColor: "bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700",
     projects: [
       {
+        title: "ORION - AI Talent & Onboarding Partner",
+        problem: "Manual hiring processes are slow, biased, and lack structured onboarding for new employees.",
+        solution: "Built an end-to-end HR platform with AI-powered CV matching, behavioral assessments, conversational chatbot using LangChain & RAG, and automated onboarding workflows.",
+        techStack: "React, TypeScript, Node.js, LangChain, RAG, AI/ML, PostgreSQL",
+        github: "https://github.com/Marwakhot/space42_final"
+      },
+      {
         title: "PEAR Internships Platform",
         problem: "Disconnected process for students finding internships and companies managing applications.",
         solution: "Built a full-stack web application that connects students and companies by streamlining internship postings, applications, and tracking through role-based dashboards.",
@@ -115,7 +129,7 @@ const categories: Category[] = [
       {
         title: "Brain Brew",
         problem: "Passive PDF learning not engaging students in critical thinking.",
-        solution: "Created an AI-powered platform that asks thought-provoking questions instead of direct answers, with 4 adaptive difficulty levels.",
+        solution: "Created an AI-powered platform that asks thought-provoking questions instead of direct answers, with 4 adaptive difficulty levels and immersive 3D interface.",
         techStack: "React, TypeScript, Supabase, PostgreSQL, Three.js, Tailwind CSS",
         github: "https://github.com/Marwakhot/BrainBrew"
       }
@@ -134,7 +148,7 @@ const ProjectsSection = () => {
       <div className="absolute top-20 left-10 w-72 h-72 bg-violet-400/20 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-rose-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-amber-400/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-[320px_1fr] gap-12">
           {/* Left Side - Heading & Filters */}
@@ -157,17 +171,15 @@ const ProjectsSection = () => {
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
                   style={{ animationDelay: `${index * 100}ms` }}
-                  className={`flex items-center gap-3 px-5 py-4 rounded-2xl border-2 font-semibold transition-all duration-500 text-left group ${
-                    activeCategory === category.id
+                  className={`flex items-center gap-3 px-5 py-4 rounded-2xl border-2 font-semibold transition-all duration-500 text-left group ${activeCategory === category.id
                       ? `${category.tabColor} shadow-xl scale-[1.03] -rotate-1`
                       : "bg-card/80 backdrop-blur-sm text-foreground/70 border-border hover:border-foreground/30 hover:shadow-lg hover:scale-[1.02] hover:rotate-1"
-                  }`}
+                    }`}
                 >
-                  <span className={`p-2 rounded-xl transition-all duration-300 ${
-                    activeCategory === category.id 
-                      ? "bg-white/20" 
+                  <span className={`p-2 rounded-xl transition-all duration-300 ${activeCategory === category.id
+                      ? "bg-white/20"
                       : "bg-muted group-hover:bg-primary/10"
-                  }`}>
+                    }`}>
                     {category.icon}
                   </span>
                   <span className="flex-1">{category.name}</span>
@@ -189,7 +201,7 @@ const ProjectsSection = () => {
               >
                 {/* Decorative Corner */}
                 <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-white/40 to-transparent rounded-tr-3xl rounded-bl-[100px]" />
-                
+
                 {/* Card Number Badge */}
                 <div className={`absolute -top-3 -left-3 w-10 h-10 rounded-2xl flex items-center justify-center text-white font-bold shadow-lg ${currentCategory.btnColor}`}>
                   {String(index + 1).padStart(2, '0')}
@@ -198,7 +210,7 @@ const ProjectsSection = () => {
                 <h3 className={`text-xl font-bold mb-5 mt-2 ${currentCategory.accent} group-hover:scale-[1.02] transition-transform`}>
                   {project.title}
                 </h3>
-                
+
                 <div className="space-y-4">
                   <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-rose-200/50 shadow-sm hover:shadow-md transition-shadow">
                     <span className="text-xs font-bold text-rose-600 uppercase tracking-widest flex items-center gap-2">
@@ -207,7 +219,7 @@ const ProjectsSection = () => {
                     </span>
                     <p className="text-foreground/80 mt-2 text-sm leading-relaxed">{project.problem}</p>
                   </div>
-                  
+
                   <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-emerald-200/50 shadow-sm hover:shadow-md transition-shadow">
                     <span className="text-xs font-bold text-emerald-600 uppercase tracking-widest flex items-center gap-2">
                       <Sparkles className="w-3.5 h-3.5" />
@@ -215,7 +227,7 @@ const ProjectsSection = () => {
                     </span>
                     <p className="text-foreground/80 mt-2 text-sm leading-relaxed">{project.solution}</p>
                   </div>
-                  
+
                   <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-violet-200/50 shadow-sm hover:shadow-md transition-shadow">
                     <span className="text-xs font-bold text-violet-600 uppercase tracking-widest flex items-center gap-2">
                       <Wrench className="w-3.5 h-3.5" />
@@ -223,8 +235,8 @@ const ProjectsSection = () => {
                     </span>
                     <div className="flex flex-wrap gap-2 mt-2">
                       {project.techStack.split(', ').map((tech, i) => (
-                        <span 
-                          key={i} 
+                        <span
+                          key={i}
                           className="px-2.5 py-1 bg-gradient-to-r from-violet-100 to-purple-100 text-violet-700 rounded-full text-xs font-medium border border-violet-200/50"
                         >
                           {tech}

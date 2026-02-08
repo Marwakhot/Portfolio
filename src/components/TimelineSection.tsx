@@ -192,16 +192,16 @@ const TimelineSection = () => {
                                     </div>
 
                                     {/* Content Card */}
-                                    <div className={`w-full md:w-[calc(50%-2rem)] ${isLeft ? 'md:text-right' : 'md:text-left'}`}>
+                                    <div className={`w-full md:w-[calc(50%-2rem)]`}>
                                         <div
-                                            className={`relative rounded-3xl p-6 border-2 backdrop-blur-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group cursor-pointer ${event.bgColor} ${event.borderColor} shadow-xl`}
+                                            className={`relative rounded-3xl p-6 border-2 backdrop-blur-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group cursor-pointer ${event.bgColor} ${event.borderColor} shadow-xl text-left`}
                                             onClick={() => toggleExpand(index)}
                                         >
                                             {/* Decorative Corner */}
                                             <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-white/40 to-transparent rounded-tr-3xl rounded-bl-[100px]" />
 
                                             {/* Icon Badge */}
-                                            <div className={`absolute -top-3 ${isLeft ? 'md:-right-3 -left-3' : 'md:-left-3 -left-3'} w-12 h-12 rounded-2xl flex items-center justify-center text-white shadow-lg ${event.badgeColor}`}>
+                                            <div className={`absolute -top-3 -left-3 w-12 h-12 rounded-2xl flex items-center justify-center text-white shadow-lg ${event.badgeColor}`}>
                                                 {event.icon}
                                             </div>
 
