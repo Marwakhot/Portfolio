@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Github, Brain, Shield, TrendingUp, Sparkles, Zap, Target, Wrench } from "lucide-react";
+import { Github, Brain, Shield, TrendingUp, Sparkles, Zap, Target, Wrench, Bot } from "lucide-react";
 
 interface Project {
   title: string;
@@ -31,19 +31,30 @@ const categories: Category[] = [
     btnColor: "bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700",
     projects: [
       {
-        title: "ORION - AI Talent & Onboarding Partner",
-        problem: "Manual hiring processes are slow, biased, and lack structured onboarding for new employees.",
-        solution: "Built an end-to-end HR platform with AI-powered CV matching, behavioral assessments, conversational chatbot using LangChain & RAG, and automated onboarding workflows.",
-        techStack: "React, TypeScript, Node.js, LangChain, RAG, AI/ML, PostgreSQL",
-        github: "https://github.com/Marwakhot/space42_final"
-      },
-      {
         title: "Brain Brew",
         problem: "Passive PDF learning not engaging students in critical thinking.",
         solution: "Created an AI-powered platform that asks thought-provoking questions instead of direct answers, using NLP to generate adaptive difficulty levels that promote deeper understanding.",
         techStack: "React, TypeScript, AI/ML, NLP, Supabase, PostgreSQL, Three.js",
         github: "https://github.com/Marwakhot/BrainBrew"
       },
+      {
+        title: "ORION - AI Talent & Onboarding Partner",
+        problem: "Manual hiring processes are slow, biased, and lack structured onboarding for new employees.",
+        solution: "Built an end-to-end HR platform with AI-powered CV matching, behavioral assessments, conversational chatbot using LangChain & RAG, and automated onboarding workflows.",
+        techStack: "React, TypeScript, Node.js, LangChain, RAG, AI/ML, PostgreSQL",
+        github: "https://github.com/Marwakhot/space42_final"
+      }
+    ]
+  },
+  {
+    id: "python-ml",
+    name: "Python/Machine Learning",
+    icon: <Bot className="w-5 h-5" />,
+    tabColor: "bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-blue-400",
+    cardBg: "bg-gradient-to-br from-blue-100 via-indigo-50 to-purple-100",
+    accent: "text-blue-700",
+    btnColor: "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700",
+    projects: [
       {
         title: "Automated Bug Triage System",
         problem: "Slow bug assignment causing delays in development cycles and inefficient resource allocation.",
@@ -57,18 +68,7 @@ const categories: Category[] = [
         solution: "Implemented Fuzzy Logic, Behavior Trees, and Q-Learning for obstacle avoidance in a 10m × 10m simulated arena.",
         techStack: "Python, Fuzzy Logic, Behavior Trees, Reinforcement Learning (Q-Learning)",
         github: "https://github.com/Marwakhot/Gazebo_robot_navigation"
-      }
-    ]
-  },
-  {
-    id: "responsible-ai",
-    name: "Responsible AI & Risk",
-    icon: <Shield className="w-5 h-5" />,
-    tabColor: "bg-gradient-to-r from-emerald-500 to-teal-600 text-white border-emerald-400",
-    cardBg: "bg-gradient-to-br from-emerald-100 via-teal-50 to-cyan-100",
-    accent: "text-emerald-700",
-    btnColor: "bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700",
-    projects: [
+      },
       {
         title: "AI Safety Audit: Credit Fairness",
         problem: "Black box problem in loan-approval AI with hidden biases causing legal and ethical risks.",
