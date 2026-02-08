@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 20% 97%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    --primary: 230 80% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 20% 94%;
+    --secondary-foreground: 220 20% 15%;
+
+    --muted: 45 15% 92%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 330 85% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 45 15% 88%;
+    --input: 45 15% 88%;
+    --ring: 230 80% 30%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors */
+    --card-orange: 30 100% 95%;
+    --card-orange-border: 30 90% 55%;
+    --card-yellow: 48 100% 93%;
+    --card-yellow-border: 45 95% 50%;
+    --card-mint: 160 50% 93%;
+    --card-mint-border: 160 60% 40%;
+    --card-pink: 350 100% 95%;
+    --card-pink-border: 350 85% 55%;
+
+    --gradient-id-card: linear-gradient(135deg, hsl(350, 85%, 60%) 0%, hsl(35, 95%, 55%) 100%);
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 45 20% 95%;
+
+    --card: 220 20% 14%;
+    --card-foreground: 45 20% 95%;
+
+    --popover: 220 20% 14%;
+    --popover-foreground: 45 20% 95%;
+
+    --primary: 230 70% 60%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 45 20% 95%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 45 10% 60%;
+
+    --accent: 330 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 230 70% 60%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .font-sans {
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+@layer components {
+  .id-card-hang {
+    animation: swing 3s ease-in-out infinite;
+    transform-origin: top center;
+  }
+
+  .laptop-screen-scroll {
+    animation: scrollContent 20s linear infinite;
+  }
+
+  @keyframes swing {
+    0%, 100% {
+      transform: rotate(2deg);
+    }
+    50% {
+      transform: rotate(-2deg);
+    }
+  }
+
+  @keyframes scrollContent {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+
+  .experience-card {
+    @apply rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .experience-card-orange {
+    @apply experience-card;
+    background-color: hsl(var(--card-orange));
+    border-left: 4px solid hsl(var(--card-orange-border));
+  }
+
+  .experience-card-yellow {
+    @apply experience-card;
+    background-color: hsl(var(--card-yellow));
+    border-left: 4px solid hsl(var(--card-yellow-border));
+  }
+
+  .experience-card-mint {
+    @apply experience-card;
+    background-color: hsl(var(--card-mint));
+    border-left: 4px solid hsl(var(--card-mint-border));
+  }
+
+  .experience-card-pink {
+    @apply experience-card;
+    background-color: hsl(var(--card-pink));
+    border-left: 4px solid hsl(var(--card-pink-border));
+  }
+}
